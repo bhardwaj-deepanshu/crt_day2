@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+    int n, count = 0, arm, org;
+    printf("enter a number:");
+    scanf("%d", &n);
+    org = n;
+    while (n)
+    {
+        count++;
+        n /= 10;
+    }
+    org=n;
+    arm = 0;
+    while (n)
+    {
+        arm += pow(n % 10, count);
+        n /= 10;
+    }
+    if (org == arm)
+        printf("armstrong");
+    else
+       { printf("not");}
+        return 0;
+}
